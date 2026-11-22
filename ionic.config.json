@@ -1,0 +1,7 @@
+{
+  "name": "ap3-gestos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
