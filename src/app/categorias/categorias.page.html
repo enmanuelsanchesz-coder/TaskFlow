@@ -1,0 +1,75 @@
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Categorías</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="encabezado">
+    <h2>Organiza tus tareas</h2>
+    <p>Visualiza tus actividades por categoría.</p>
+  </div>
+
+  <div class="categorias-container">
+    <ion-card
+      *ngFor="let categoria of categorias"
+      button
+      (click)="seleccionarCategoria(categoria.nombre)"
+      [class.seleccionada]="categoriaSeleccionada === categoria.nombre">
+
+      <ion-card-content>
+        <div class="categoria-icono">
+          <ion-icon [name]="categoria.icono"></ion-icon>
+        </div>
+
+        <div class="categoria-info">
+          <h3>{{ categoria.nombre }}</h3>
+          <p>
+            {{ taskService.tareas.filter(t => t.categoria === categoria.nombre).length }}
+            tareas
+          </p>
+        </div>
+      </ion-card-content>
+
+    </ion-card>
+  </div>
+
+  <div class="resumen">
+    <h2>{{ categoriaSeleccionada }}</h2>
+
+    <div class="estadisticas">
+      <div class="dato">
+        <strong>{{ completadas }}</strong>
+        <span>Completadas</span>
+      </div>
+
+      <div class="dato">
+        <strong>{{ pendientes }}</strong>
+        <span>Pendientes</span>
+      </div>
+    </div>
+  </div>
+
+  <ion-list *ngIf="tareasFiltradas.length > 0; else sinTareas">
+    <ion-item *ngFor="let tarea of tareasFiltradas">
+      <ion-icon
+        [name]="tarea.completada ? 'checkmark-circle-outline' : 'ellipse-outline'"
+        slot="start">
+      </ion-icon>
+
+      <ion-label>
+        <h3>{{ tarea.titulo }}</h3>
+        <p>{{ tarea.hora }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #sinTareas>
+    <div class="mensaje-vacio">
+      <p>No hay tareas en esta categoría.</p>
+    </div>
+  </ng-template>
+
+</ion-content>

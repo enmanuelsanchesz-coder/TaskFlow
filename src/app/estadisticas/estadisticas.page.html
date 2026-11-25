@@ -1,0 +1,176 @@
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Estadísticas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="estadisticas-content">
+
+  <div class="contenido">
+
+    <!-- INTRODUCCIÓN -->
+    <div class="intro">
+      <span class="subtitulo">RESUMEN DE TU ACTIVIDAD</span>
+      <h1>Tu progreso 📊</h1>
+      <p>Revisa cómo avanzan tus tareas y actividades.</p>
+    </div>
+
+    <!-- PROGRESO GENERAL -->
+    <ion-card class="card-progreso">
+      <ion-card-content>
+        <div class="progreso-header">
+          <div>
+            <span>Progreso general</span>
+            <h2>{{ porcentaje }}%</h2>
+          </div>
+
+          <div class="icono-progreso">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </div>
+        </div>
+
+        <ion-progress-bar
+          [value]="progreso"
+          color="light">
+        </ion-progress-bar>
+
+        <p>{{ completadas }} de {{ totalTareas }} tareas completadas</p>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- RESUMEN -->
+    <div class="resumen-grid">
+
+      <ion-card class="card-resumen">
+        <ion-card-content>
+          <div class="icono total">
+            <ion-icon name="list-outline"></ion-icon>
+          </div>
+
+          <h2>{{ totalTareas }}</h2>
+          <p>Total de tareas</p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="card-resumen">
+        <ion-card-content>
+          <div class="icono completadas">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </div>
+
+          <h2>{{ completadas }}</h2>
+          <p>Completadas</p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="card-resumen">
+        <ion-card-content>
+          <div class="icono pendientes">
+            <ion-icon name="time-outline"></ion-icon>
+          </div>
+
+          <h2>{{ pendientes }}</h2>
+          <p>Pendientes</p>
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+
+    <!-- ESTADÍSTICAS POR CATEGORÍA -->
+    <div class="seccion-categorias">
+      <h2>Tareas por categoría</h2>
+      <p class="descripcion">Distribución de tus actividades</p>
+
+      <!-- UNIVERSIDAD -->
+      <ion-card class="card-categoria">
+        <ion-card-content>
+          <div class="categoria-header">
+            <div class="categoria-icon universidad">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <div class="categoria-info">
+              <h3>Universidad</h3>
+              <p>{{ tareasUniversidad }} tareas</p>
+            </div>
+
+            <strong>{{ tareasUniversidad }}</strong>
+          </div>
+
+          <ion-progress-bar
+            [value]="totalTareas > 0 ? tareasUniversidad / totalTareas : 0"
+            color="primary">
+          </ion-progress-bar>
+
+          <div class="categoria-footer">
+            <span>{{ completadasUniversidad }} completadas</span>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- TRABAJO -->
+      <ion-card class="card-categoria">
+        <ion-card-content>
+          <div class="categoria-header">
+            <div class="categoria-icon trabajo">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <div class="categoria-info">
+              <h3>Trabajo</h3>
+              <p>{{ tareasTrabajo }} tareas</p>
+            </div>
+
+            <strong>{{ tareasTrabajo }}</strong>
+          </div>
+
+          <ion-progress-bar
+            [value]="totalTareas > 0 ? tareasTrabajo / totalTareas : 0"
+            color="primary">
+          </ion-progress-bar>
+
+          <div class="categoria-footer">
+            <span>{{ completadasTrabajo }} completadas</span>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- PERSONAL -->
+      <ion-card class="card-categoria">
+        <ion-card-content>
+          <div class="categoria-header">
+            <div class="categoria-icon personal">
+              <ion-icon name="person-outline"></ion-icon>
+            </div>
+
+            <div class="categoria-info">
+              <h3>Personal</h3>
+              <p>{{ tareasPersonal }} tareas</p>
+            </div>
+
+            <strong>{{ tareasPersonal }}</strong>
+          </div>
+
+          <ion-progress-bar
+            [value]="totalTareas > 0 ? tareasPersonal / totalTareas : 0"
+            color="primary">
+          </ion-progress-bar>
+
+          <div class="categoria-footer">
+            <span>{{ completadasPersonal }} completadas</span>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+
+    <!-- MENSAJE FINAL -->
+    <div class="mensaje-final">
+      <h3>¡Sigue adelante! 🚀</h3>
+      <p>Cada tarea completada es un paso más hacia tus objetivos.</p>
+    </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7047ff"/>
+      <stop offset="100%" stop-color="#956bff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" rx="36" fill="#f2f3fb"/>
+  <rect x="55" y="45" width="690" height="360" rx="28" fill="url(#bg)"/>
+
+  <rect x="105" y="100" width="590" height="250" rx="22" fill="#ffffff"/>
+
+  <rect x="140" y="140" width="230" height="20" rx="10" fill="#ded6ff"/>
+  <rect x="140" y="180" width="420" height="16" rx="8" fill="#eceaf5"/>
+  <rect x="140" y="220" width="420" height="16" rx="8" fill="#eceaf5"/>
+  <rect x="140" y="260" width="290" height="16" rx="8" fill="#eceaf5"/>
+
+  <circle cx="610" cy="185" r="48" fill="#e8fff4"/>
+
+  <path
+    d="M590 184 l14 14 l28 -34"
+    fill="none"
+    stroke="#12b981"
+    stroke-width="12"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <rect x="140" y="305" width="220" height="25" rx="12" fill="#7047ff"/>
+
+  <text
+    x="400"
+    y="80"
+    text-anchor="middle"
+    font-size="27"
+    font-family="Arial"
+    font-weight="bold"
+    fill="white">
+    TASKFLOW · ORGANIZA TU DÍA
+  </text>
+</svg>

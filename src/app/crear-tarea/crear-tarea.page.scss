@@ -1,0 +1,109 @@
+ion-content {
+  --background: #f5f6fc;
+}
+
+ion-header ion-toolbar {
+  --background: #ffffff;
+  --color: #22223a;
+}
+
+ion-title {
+  font-weight: 700;
+}
+
+.create-container {
+  padding: 24px 20px 40px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.create-heading {
+  margin-bottom: 30px;
+}
+
+.create-icon {
+  width: 60px;
+  height: 60px;
+  background: #eee9ff;
+  color: #7655e8;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.create-icon ion-icon {
+  font-size: 28px;
+}
+
+.create-heading h1 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #202039;
+  margin: 0 0 8px;
+}
+
+.create-heading p {
+  color: #85859a;
+  font-size: 14px;
+  margin: 0;
+}
+
+.create-form {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 10px 16px 22px;
+  box-shadow: 0 8px 25px rgba(40, 35, 80, 0.05);
+}
+
+.create-form ion-item {
+  --background: #ffffff;
+  --border-color: #eeeeF5;
+  --padding-start: 4px;
+  margin-bottom: 12px;
+}
+
+.create-form ion-label {
+  color: #555570;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.create-form ion-input,
+.create-form ion-select {
+  color: #292943;
+  --placeholder-color: #aaaabd;
+}
+
+.create-button {
+  margin-top: 25px;
+  --background: #7655e8;
+  --background-hover: #6846d8;
+  --border-radius: 14px;
+  height: 52px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.create-form ion-button[fill="outline"] {
+  margin-top: 12px;
+  --border-radius: 14px;
+  height: 48px;
+  --border-color: #dedeea;
+  --color: #65657d;
+}
+
+@media (max-width: 480px) {
+  .create-container {
+    padding: 20px 16px;
+  }
+
+  .create-heading h1 {
+    font-size: 24px;
+  }
+
+  .create-form {
+    padding: 8px 12px 20px;
+  }
+}

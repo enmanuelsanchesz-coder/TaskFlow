@@ -1,0 +1,66 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-button fill="clear" slot="start" (click)="volver()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+
+    <ion-title>Nueva tarea</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="create-container">
+
+    <div class="create-heading">
+      <div class="create-icon">
+        <ion-icon name="create-outline"></ion-icon>
+      </div>
+
+      <h1>Crear actividad</h1>
+      <p>Organiza tu tiempo y agrega una nueva tarea a tu día.</p>
+    </div>
+
+    <div class="create-form">
+
+      <ion-item>
+        <ion-label position="stacked">Nombre de la tarea</ion-label>
+        <ion-input
+          [(ngModel)]="titulo"
+          placeholder="Ej. Estudiar programación">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Categoría</ion-label>
+        <ion-select [(ngModel)]="categoria" interface="popover">
+          <ion-select-option value="Personal">Personal</ion-select-option>
+          <ion-select-option value="Universidad">Universidad</ion-select-option>
+          <ion-select-option value="Trabajo">Trabajo</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Hora</ion-label>
+        <ion-input type="time" [(ngModel)]="hora"></ion-input>
+      </ion-item>
+
+      <ion-button
+        expand="block"
+        class="create-button"
+        (click)="guardarTarea()">
+        <ion-icon name="checkmark-outline" slot="start"></ion-icon>
+        Crear tarea
+      </ion-button>
+
+      <ion-button
+        expand="block"
+        fill="outline"
+        class="cancel-button"
+        (click)="volver()">
+        Cancelar
+      </ion-button>
+
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,151 @@
+
+ion-content {
+  --background: #f5f6fb;
+}
+
+.encabezado {
+  margin: 10px 4px 24px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #20233a;
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: #85889c;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+.categorias-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+ion-card {
+  margin: 0;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(30, 40, 80, 0.05);
+  border: 2px solid transparent;
+  transition: 0.2s ease;
+
+  &.seleccionada {
+    border-color: #6545e8;
+    background: #f0edff;
+  }
+
+  ion-card-content {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 14px;
+  }
+}
+
+.categoria-icono {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #eae5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ion-icon {
+    font-size: 24px;
+    color: #6545e8;
+  }
+}
+
+.categoria-info {
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #242640;
+    margin: 0 0 5px;
+  }
+
+  p {
+    color: #85889c;
+    margin: 0;
+    font-size: 13px;
+  }
+}
+
+.resumen {
+  margin-top: 28px;
+  margin-bottom: 16px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #20233a;
+    margin-bottom: 14px;
+  }
+}
+
+.estadisticas {
+  display: flex;
+  gap: 12px;
+}
+
+.dato {
+  flex: 1;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 4px 15px rgba(30, 40, 80, 0.04);
+
+  strong {
+    font-size: 26px;
+    font-weight: 800;
+    color: #6545e8;
+  }
+
+  span {
+    font-size: 12px;
+    color: #85889c;
+  }
+}
+
+ion-list {
+  background: transparent;
+  padding: 0;
+}
+
+ion-item {
+  --background: #ffffff;
+  --border-radius: 14px;
+  --padding-start: 14px;
+  margin-bottom: 10px;
+
+  ion-icon {
+    font-size: 22px;
+    color: #6545e8;
+  }
+
+  h3 {
+    font-weight: 600;
+    color: #272940;
+  }
+
+  p {
+    color: #8a8da0;
+  }
+}
+
+.mensaje-vacio {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  color: #85889c;
+}

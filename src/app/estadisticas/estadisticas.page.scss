@@ -1,0 +1,304 @@
+
+.estadisticas-content {
+  --background: #f4f5fb;
+}
+
+.contenido {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 18px 40px;
+}
+
+.intro {
+  margin-bottom: 24px;
+}
+
+.subtitulo {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #85859e;
+}
+
+.intro h1 {
+  margin: 8px 0;
+  color: #25263f;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.intro p {
+  margin: 0;
+  color: #85859e;
+  font-size: 14px;
+}
+
+/* PROGRESO GENERAL */
+.card-progreso {
+  margin: 0 0 20px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #6947ff, #8765ff);
+  color: white;
+  box-shadow: 0 10px 25px rgba(105, 71, 255, 0.15);
+}
+
+.card-progreso ion-card-content {
+  padding: 24px;
+}
+
+.progreso-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.progreso-header span {
+  font-size: 13px;
+}
+
+.progreso-header h2 {
+  margin: 10px 0 0;
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+}
+
+.icono-progreso {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-progreso ion-icon {
+  font-size: 32px;
+  color: white;
+}
+
+.card-progreso ion-progress-bar {
+  height: 8px;
+  border-radius: 20px;
+  --background: rgba(255, 255, 255, 0.25);
+  --progress-background: white;
+}
+
+.card-progreso p {
+  margin: 14px 0 0;
+  font-size: 12px;
+  color: white;
+}
+
+/* TARJETAS RESUMEN */
+.resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card-resumen {
+  margin: 0;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(35, 35, 65, 0.04);
+}
+
+.card-resumen ion-card-content {
+  padding: 20px;
+}
+
+.icono {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.icono ion-icon {
+  font-size: 21px;
+}
+
+.icono.total {
+  background: #eee9ff;
+  color: #704bff;
+}
+
+.icono.completadas {
+  background: #e2f8ed;
+  color: #0aaa68;
+}
+
+.icono.pendientes {
+  background: #fff1df;
+  color: #f39a36;
+}
+
+.card-resumen h2 {
+  margin: 0 0 6px;
+  color: #292a43;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.card-resumen p {
+  margin: 0;
+  color: #85859e;
+  font-size: 13px;
+}
+
+/* CATEGORÍAS */
+.seccion-categorias {
+  margin-top: 30px;
+}
+
+.seccion-categorias > h2 {
+  margin: 0 0 6px;
+  color: #25263f;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.descripcion {
+  margin: 0 0 18px;
+  color: #85859e;
+  font-size: 14px;
+}
+
+.card-categoria {
+  margin: 0 0 14px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(35, 35, 65, 0.04);
+}
+
+.card-categoria ion-card-content {
+  padding: 20px;
+}
+
+.categoria-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.categoria-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoria-icon ion-icon {
+  font-size: 23px;
+}
+
+.categoria-icon.universidad {
+  color: #704bff;
+  background: #eee9ff;
+}
+
+.categoria-icon.trabajo {
+  color: #2580db;
+  background: #e5f2ff;
+}
+
+.categoria-icon.personal {
+  color: #0aaa68;
+  background: #e2f8ed;
+}
+
+.categoria-info {
+  flex: 1;
+}
+
+.categoria-info h3 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #292a43;
+}
+
+.categoria-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #85859e;
+}
+
+.categoria-header > strong {
+  color: #704bff;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.card-categoria ion-progress-bar {
+  height: 7px;
+  border-radius: 20px;
+  --background: #eee9ff;
+  --progress-background: #704bff;
+}
+
+.categoria-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #85859e;
+}
+
+/* MENSAJE FINAL */
+.mensaje-final {
+  margin-top: 24px;
+  padding: 22px;
+  border-radius: 18px;
+  background: #eee9ff;
+  text-align: center;
+}
+
+.mensaje-final h3 {
+  margin: 0 0 8px;
+  color: #704bff;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.mensaje-final p {
+  margin: 0;
+  color: #77738e;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (min-width: 700px) {
+  .resumen-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 380px) {
+  .contenido {
+    padding: 20px 12px 30px;
+  }
+
+  .intro h1 {
+    font-size: 25px;
+  }
+
+  .card-resumen ion-card-content {
+    padding: 15px;
+  }
+
+  .card-categoria ion-card-content {
+    padding: 15px;
+  }
+}
